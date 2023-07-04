@@ -1,0 +1,34 @@
+ @media(prefers-color-scheme:light){
+    :root{
+        --body:#151437;
+        --title:#fff;
+        --tex:#fff;
+    }
+
+    body{
+        background: var(--body);
+    }
+
+    .logo::after{
+        content: url(../img/logo\ light.svg);
+     }
+     .header_menu.collapsed{
+        background-color:var(--tex);
+    
+    }
+    .header_menu::after,.header_menu::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        border-radius: 5px;
+        background-color:var(--title)!important;
+        transition: .5s;
+        top: 10px;
+    }
+    .header_menu::before{
+        top: -10px;
+     }
+ }
